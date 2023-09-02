@@ -99,10 +99,8 @@ if __name__ == '__main__':
     # opening door
     door_opening_matrix = np.identity(4)
     door_opening_matrix[:, 3] = [3, -.1, 0, 0]
-
     d_length = .95
     d_height = 2.1
-
     door_opening = model.create_opening("door_opening", wall1, .95, d_height, matrix=door_opening_matrix)
 
     # create door
@@ -110,7 +108,7 @@ if __name__ == '__main__':
     model.create_relationship_aggregates("opening_v_door", door_opening, [door])
 
     # wall2
-    # Rotate our wall along the Y axis by 90 degrees
+    # Rotate wall along the Y axis by 90 degrees
     rotation_matrix = np.array([
         [0., -1., 0., 0.],
         [1., 0., 0., 0.],
